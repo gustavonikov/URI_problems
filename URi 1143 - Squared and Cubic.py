@@ -1,5 +1,4 @@
 N = int(input())
-
 number = 1
 
 for numbers in range(N):
