@@ -29,8 +29,8 @@ while True:
     for vector in array:
         result = ''
         for element in vector:
-            resultLen = len(str(element))
-            numberOfSpaces = T - resultLen
+            elementLen = len(str(element))
+            numberOfSpaces = T - elementLen
             space = numberOfSpaces * ' '
             result += space + f' {element}'
         print(result[1:])
