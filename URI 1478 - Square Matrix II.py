@@ -28,9 +28,9 @@ while True:
             bellowCount -= 1
         bellowCountLine += 1
 
-    for lines in range(N):
+    for vector in array:
         result = ''
-        for columns in range(N):
-            result += ' %3d' %array[lines][columns]
+        for element in vector:
+            result += ' %3d' %element
         print(result[1:])
     print()
