@@ -22,8 +22,6 @@ for lines in array[1:11]:
     
     count +=1
     
-
-
 elementsSum = sum(aboveTheDiagonal)
 elementsAverage = elementsSum/len(aboveTheDiagonal)
 

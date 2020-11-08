@@ -12,17 +12,17 @@ for lines in range(0, 12):
     
     array.append(arrayLine)
 
-aboveTheDiagonal = []
+belowTheDiagonal = []
 count = 11
 
 for lines in array[1:]:
     for numbers in lines[count:]:
-        aboveTheDiagonal.append(numbers)
+        belowTheDiagonal.append(numbers)
     
     count -= 1
 
-elementsSum = sum(aboveTheDiagonal)
-elementsAverage = elementsSum/len(aboveTheDiagonal)
+elementsSum = sum(belowTheDiagonal)
+elementsAverage = elementsSum/len(belowTheDiagonal)
 
 if O == 'S':
     print('%.1f'%elementsSum)

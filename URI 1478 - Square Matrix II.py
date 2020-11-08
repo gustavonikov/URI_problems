@@ -16,17 +16,17 @@ while True:
             aboveCount += 1
         aboveCountLine += 1
 
-    bellowCountLine = 1
+    belowCountLine = 1
 
     for indexLine, lines in enumerate(array[1:N]):
         indexNumber = 0
-        bellowCount = 0
+        belowCount = 0
         newValue = indexLine + 2
-        for numbers in lines[:bellowCountLine]:
-            lines[indexNumber] = newValue + bellowCount
+        for numbers in lines[:belowCountLine]:
+            lines[indexNumber] = newValue + belowCount
             indexNumber += 1
-            bellowCount -= 1
-        bellowCountLine += 1
+            belowCount -= 1
+        belowCountLine += 1
 
     for vector in array:
         result = ''
