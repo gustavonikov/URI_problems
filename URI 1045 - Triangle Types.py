@@ -8,9 +8,7 @@ A = numbers[0]
 B = numbers[1]
 C = numbers[2]
 
-
-
-if A >= (B+C):
+if A >= (B + C):
     print('NAO FORMA TRIANGULO')
 
 else:
