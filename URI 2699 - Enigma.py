@@ -1,57 +1,31 @@
-# Fazer um array com cada indice sendo uma letra, e ir alterando cada letra que
-""" é uma interrogação, pra conferir se a letra já era um número só checar no infos
-se o indice a ser alterado tá contido nele. Dá um join no array pra virar string e
-dps virar um numero, checando se o número é igual à D
-E torcer pra dá certo. """
-
-D, N = input().split()
-lenOfD = len(D)
+S, N = input().split()
+width = len(S)
 N = int(N)
 
-lowerD = ''
-higherD = ''
-infos = {}
+minValue = int('1' + '0' * (width - 1))
+minimum = minValue // N
 
-for index, letter in enumerate(D):
-    if letter.isdigit():
-        lowerD += letter
-        higherD += letter
-        infos[index] = letter
-    else:
-        if index == 0:
-            lowerD += '1'
-            higherD += '9'
-        else:
-            lowerD += '0'
-            higherD += '9'
+while True:
+    D = N * minimum
+    print(D)
+    isEqual = False
 
-lowerD = int(lowerD)
-higherD = int(higherD)
+    for index, letter in enumerate(S):
+        if letter != '?':
+            if str(D)[index] != letter:
+                isEqual = False
+                break
+            else:
+                isEqual = True
+    
+    if isEqual == True:
+        print(D)
+        break
 
-rest = lowerD % N
-quotient = lowerD // N
+    minimum += 1
 
-if rest != 0:
-    while True:
-        result = quotient * N
-        resultString = str(result)
+    if len(str(D)) > width:
+        print('*')
 
-        matchInfo = 0
-
-        newRest = result % N
-
-        if newRest == 0:
-            for position, value in infos.items():
-                if resultString[position] == value:
-                    matchInfo += 1
-                    
-        quotient += 1
-        
-        if result > higherD:
-            print('*')
-            break
-        if len(infos) == matchInfo:
-            print(result)
-            break
-else:
-    print(lowerD)
+# ???????????????????????????????1 2
+# 1??????????????????????????????? 2
